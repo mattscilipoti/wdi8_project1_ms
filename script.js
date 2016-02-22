@@ -1,4 +1,5 @@
 var cards = [];
+var guesses = 0;
 
 
 for (var i = 0; i < 25; i++) {
@@ -15,15 +16,27 @@ for(var i = 0; i < cards.length; i++){
 
 
 
-function colorOnMouseover (){
+function revealSquare (){
   var squares = document.querySelectorAll(".square");
     for (var i = 0; i < squares.length; i++) {
-        squares[i].addEventListener('mouseover', function(){
-          this.style.background = "red";
-        });
-        squares[i].addEventListener('mouseout', function() {
-          this.style.background = "grey";
+        squares[i].addEventListener('click', function(){
+          for (var i = 0; i < 5; i++) {
+            if (guesses < 2) {
+              this.style.background = "white";
+            } else {
+              this.style.background = "black";
+            }
+          }
+          guesses += 1;
         });
     }
 }
-colorOnMouseover();
+
+
+revealSquare();
+
+
+
+// squares[i].addEventListener('mouseout', function() {
+//   this.style.background = "black";
+// });

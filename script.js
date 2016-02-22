@@ -19,7 +19,7 @@ for(var i = 0; i < cards.length; i++){
 function revealSquare (){
   var squares = document.querySelectorAll(".square");
 
-if (guesses < 3) {
+
 
     for (var i = 0; i < squares.length; i++) {
         squares[i].addEventListener('click', function(){
@@ -29,15 +29,36 @@ if (guesses < 3) {
 
     } // end loop over all squares
 
-}
 
-else {
-  squares.style.background = "black";
-}
+
+
 
 
 
 }   //end revealSquare function
 
 
+function changeColorBack() {
+  if (squares.style.background === "white") {
+    squares.style.background = "black";
+}
+}
+
+
+
+function runGame () {
+
+if (guesses < 3) {
 revealSquare();
+}
+else {
+changeColorBack()
+
+  }
+
+
+
+}
+
+
+runGame();

@@ -23,11 +23,6 @@ function chooseCards (){
                 else if (pickedCards.length === 1) {
                   pickedCards.push({id: this.id, text: this.innerHTML});
 
-
-
-
-                    // if (document.getElementById("square_"+pickedCards[0]).innerHTML === document.getElementById("square_"+pickedCards[1]).innerHTML) {
-
                     if (pickedCards[0].text === pickedCards[1].text) {
                         console.log("match");
                         pickedCards = [];
@@ -37,13 +32,12 @@ function chooseCards (){
                       var guess1 = document.getElementById(pickedCards[0].id);
                       var guess2 = document.getElementById(pickedCards[1].id);
 
-                      guess1.style.background = "black";
-                      guess2.style.background = "black";
+                      setTimeout(function() {
+                        guess1.style.background = "black";
+                        guess2.style.background = "black";
+                      }, 500);
 
-
-
-
-                    pickedCards = [];
+                      pickedCards = [];
                     }
                 }
 

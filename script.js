@@ -1,17 +1,18 @@
-var cards = [];
-var pickedCards = [];
 
-for (var i = 1; i < 10; i++) {
-  cards.push(i, i);
+function buildBoard () {
+  var cards = [];
+
+  for (var i = 1; i < 10; i++) {
+    cards.push(i, i);
+  }
+  for(var i = 0; i < cards.length; i++){
+    document.getElementById('container').innerHTML += '<div class="square" id="square_'+[i]+'"></div>';
+    document.getElementById('square_'+[i]).innerHTML += cards[i];
+  }
 }
-for(var i = 0; i < cards.length; i++){
-  document.getElementById('container').innerHTML += '<div class="square" id="square_'+[i]+'"></div>';
-  document.getElementById('square_'+[i]).innerHTML += cards[i];
-}
 
-
-
-function chooseCards (){
+function playGame () {
+    var pickedCards = [];
     var squares = document.querySelectorAll(".square");
       for (var i = 0; i < squares.length; i++) {
           squares[i].addEventListener('click', function(){
@@ -31,23 +32,17 @@ function chooseCards (){
                       console.log("no match");
                       var guess1 = document.getElementById(pickedCards[0].id);
                       var guess2 = document.getElementById(pickedCards[1].id);
-
                       setTimeout(function() {
                         guess1.style.background = "black";
                         guess2.style.background = "black";
                       }, 500);
-
                       pickedCards = [];
-                    }
-                }
-
-
-
-          });  // end eventListener function
-
+                    }  // end condition: no match
+                }  // end condition: second card picked
+          });  // end function: eventListener
       } // end loop over all squares
-}   //end revealSquare function
+}   //end function: playGame
 
 
-
-  chooseCards();
+buildBoard();
+playGame();

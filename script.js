@@ -1,10 +1,16 @@
-
 function buildBoard () {
   var cards = [];
-
   for (var i = 1; i < 10; i++) {
     cards.push(i, i);
   }
+  cards.sort(function(){
+    var randomValue = Math.random();
+    if(randomValue > 0.5){
+      return 1;
+    }else{
+      return -1;
+    }
+  });
   for(var i = 0; i < cards.length; i++){
     document.getElementById('container').innerHTML += '<div class="square" id="square_'+[i]+'"></div>';
     document.getElementById('square_'+[i]).innerHTML += cards[i];
@@ -42,7 +48,6 @@ function playGame () {
           });  // end function: eventListener
       } // end loop over all squares
 }   //end function: playGame
-
 
 buildBoard();
 playGame();

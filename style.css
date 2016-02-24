@@ -1,4 +1,4 @@
-.container {
+.game_board {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -11,4 +11,11 @@
   background-color: black;
   margin: 5px;
   text-align: center;
+}
+
+.info_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
 }

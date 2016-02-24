@@ -1,6 +1,33 @@
+var cards = [];
+var deckSize;
+// var deckSize = prompt("How many cards do you want to play with?");
+
+document.querySelector(".info_box").innerHTML = '<form id="form"><input type="text" id="color-field"></input><button id="set-color">Set Color</button></form>';
+
+
+
+var button = document.querySelector("#set-color");
+var color_field = document.querySelector("#color-field");
+
+button.addEventListener("click", function()
+  {
+    deckSize = color_field.value;
+    buildBoard();
+  });
+
+
+// 
+// color_field.addEventListener("keypress", function(e){
+//   if (13 == e.keyCode) {
+//    deckSize = color_field.value;
+//   }
+// });
+
+
+
 function buildBoard () {
-  var cards = [];
-  for (var i = 1; i < 10; i++) {
+
+  for (var i = 1; i <= deckSize/2; i++) {
     cards.push(i, i);
   }
   cards.sort(function(){
@@ -12,13 +39,13 @@ function buildBoard () {
     }
   });
   for(var i = 0; i < cards.length; i++){
-    document.getElementById('container').innerHTML += '<div class="square" id="square_'+[i]+'"></div>';
+    document.querySelector('.game_board').innerHTML += '<div class="square" id="square_'+[i]+'"></div>';
     document.getElementById('square_'+[i]).innerHTML += cards[i];
   }
 }
-
 function playGame () {
     var pickedCards = [];
+    var matchedCards = 0;
     var squares = document.querySelectorAll(".square");
       for (var i = 0; i < squares.length; i++) {
           squares[i].addEventListener('click', function(){
@@ -33,6 +60,10 @@ function playGame () {
                     if (pickedCards[0].text === pickedCards[1].text) {
                         console.log("match");
                         pickedCards = [];
+                        matchedCards+=2;
+                        if (matchedCards === cards.length) {
+                          document.querySelector(".info_box").innerHTML = '<p>You Win!</p>';
+                        }
                     }
                     else {
                       console.log("no match");
@@ -49,5 +80,5 @@ function playGame () {
       } // end loop over all squares
 }   //end function: playGame
 
-buildBoard();
+// buildBoard();
 playGame();

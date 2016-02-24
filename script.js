@@ -1,12 +1,21 @@
 var cards = [];
 var deckSize;
 
+function restartButton() {
+document.querySelector("#restart").addEventListener("click", function() {
+    document.querySelector(".game_board").innerHTML = '';
+    document.querySelector(".info_box").innerHTML = '';
+    deckSize = 0;
+    cards = [];
+    initialize();
+  });
+}
 function initialize() {
-  deckSize = 0;
-
     document.querySelector(".info_box").innerHTML = '<input type="text" id="userInput" autofocus></input>';
+        userInput.focus();
     document.querySelector("#userInput").addEventListener("keypress", function(e){
       if (13 == e.keyCode) {
+        deckSize = 0;
         deckSize = document.querySelector("#userInput").value;
         document.querySelector(".info_box").innerHTML = '';
         buildBoard();
@@ -14,25 +23,6 @@ function initialize() {
       }
     });
 }
-
-var button = document.querySelector("#set-color");
-
-button.addEventListener("click", function()
-  {
-    document.querySelector(".game_board").innerHTML = '';
-    document.querySelector(".info_box").innerHTML = '';
-    deckSize = 0;
-    initialize();
-    userInput.focus();
-  });
-
-
-
-
-
-
-
-
 
 function buildBoard () {
   for (var i = 1; i <= deckSize/2; i++) {
@@ -88,5 +78,5 @@ function playGame () {
       } // end loop over all squares
 }   //end function: playGame
 
-
+restartButton();
 initialize();

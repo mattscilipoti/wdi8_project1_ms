@@ -13,7 +13,7 @@ document.querySelector("#restart").addEventListener("click", function() {
   });
 }
 function initialize() {
-    document.querySelector(".info_box").innerHTML = '<p>How many squares?</p><input type="text" id="userInput" autocomplete="off" autofocus></input>';
+    document.querySelector(".info_box").innerHTML = '<p>HOW MANY SQUARES?</p><input type="text" id="userInput" autocomplete="off" autofocus></input>';
 
     userInput.focus();
     document.querySelector("#userInput").addEventListener("keypress", function(e){

@@ -74,7 +74,7 @@ function playGame () {
                       setTimeout(function() {
                         guess1.style.background = '#C0C0C0';
                         guess2.style.background = '#C0C0C0';
-                      }, 400);
+                      }, 200);
                       pickedCards = [];
                     }  // end condition: no match
                 }  // end condition: second card picked

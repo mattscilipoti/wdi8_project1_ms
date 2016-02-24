@@ -5,6 +5,8 @@ function restartButton() {
 document.querySelector("#restart").addEventListener("click", function() {
     document.querySelector(".game_board").innerHTML = '';
     document.querySelector(".info_box").innerHTML = '';
+    document.querySelector(".results").innerHTML = '';
+
     deckSize = 0;
     cards = [];
     initialize();
@@ -62,7 +64,7 @@ function playGame () {
                         pickedCards = [];
                         matchedCards+=2;
                         if (matchedCards === cards.length) {
-                          document.querySelector(".info_box").innerHTML = '<p>You Win!</p><p>'+guesses/2+' guesses!</p>';
+                          document.querySelector(".results").innerHTML = '<p>You Win!</p><p>'+guesses/2+' Guesses</p>';
                         }
                     }
                     else {

@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 250px;
+  /*height: 250px;*/
   /*margin: 100px;*/
 }
 .square {
@@ -41,7 +41,7 @@
 #restart {
   margin: 0px auto 18px;
   border: none;
-  height: 50px;
+  height: 51px;
   width: 300px;
   font-weight: inherit;;
   font-size: inherit;
@@ -71,4 +71,8 @@ p {
   padding: 12px 0px;
   width: 300px;
   text-align: center;
+}
+
+.results {
+  margin: auto;
 }

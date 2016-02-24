@@ -18,7 +18,7 @@ function initialize() {
     userInput.focus();
     document.querySelector("#userInput").addEventListener("keypress", function(e){
       if (13 == e.keyCode) {
-        deckSize = 0;
+        // deckSize = 0;
         deckSize = document.querySelector("#userInput").value;
         document.querySelector(".info_box").innerHTML = '';
         buildBoard();
@@ -64,7 +64,7 @@ function playGame () {
                         pickedCards = [];
                         matchedCards+=2;
                         if (matchedCards === cards.length) {
-                          document.querySelector(".info_box").innerHTML = '<p>You Win!</p><p>'+guesses/2+' Guesses</p>';
+                          document.querySelector(".info_box").innerHTML = '<p>YOU WIN!</p><p>'+Math.round((deckSize/guesses)*100)+'% EFFICIENCY</p>';
                         }
                     }
                     else {
@@ -74,7 +74,7 @@ function playGame () {
                       setTimeout(function() {
                         guess1.style.background = '#C0C0C0';
                         guess2.style.background = '#C0C0C0';
-                      }, 500);
+                      }, 400);
                       pickedCards = [];
                     }  // end condition: no match
                 }  // end condition: second card picked

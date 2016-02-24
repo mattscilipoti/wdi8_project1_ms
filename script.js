@@ -11,8 +11,9 @@ document.querySelector("#restart").addEventListener("click", function() {
   });
 }
 function initialize() {
-    document.querySelector(".info_box").innerHTML = '<input type="text" id="userInput" autofocus></input>';
-        userInput.focus();
+    document.querySelector(".info_box").innerHTML = '<p>How many squares?</p><input type="text" id="userInput" autocomplete="off" autofocus></input>';
+
+    userInput.focus();
     document.querySelector("#userInput").addEventListener("keypress", function(e){
       if (13 == e.keyCode) {
         deckSize = 0;

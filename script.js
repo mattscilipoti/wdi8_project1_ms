@@ -64,7 +64,7 @@ function playGame () {
                         pickedCards = [];
                         matchedCards+=2;
                         if (matchedCards === cards.length) {
-                          document.querySelector(".results").innerHTML = '<p>You Win!</p><p>'+guesses/2+' Guesses</p>';
+                          document.querySelector(".info_box").innerHTML = '<p>You Win!</p><p>'+guesses/2+' Guesses</p>';
                         }
                     }
                     else {

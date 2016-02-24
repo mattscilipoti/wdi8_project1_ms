@@ -17,5 +17,9 @@
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  align-items: center;
 
+}
+#userInput {
+  margin: 200px
 }

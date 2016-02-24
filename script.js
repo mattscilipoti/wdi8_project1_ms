@@ -1,32 +1,40 @@
 var cards = [];
 var deckSize;
-// var deckSize = prompt("How many cards do you want to play with?");
 
-document.querySelector(".info_box").innerHTML = '<form id="form"><input type="text" id="color-field"></input><button id="set-color">Set Color</button></form>';
+function initialize() {
+  deckSize = 0;
 
-
+    document.querySelector(".info_box").innerHTML = '<input type="text" id="userInput" autofocus></input>';
+    document.querySelector("#userInput").addEventListener("keypress", function(e){
+      if (13 == e.keyCode) {
+        deckSize = document.querySelector("#userInput").value;
+        document.querySelector(".info_box").innerHTML = '';
+        buildBoard();
+        playGame();
+      }
+    });
+}
 
 var button = document.querySelector("#set-color");
-var color_field = document.querySelector("#color-field");
 
 button.addEventListener("click", function()
   {
-    deckSize = color_field.value;
-    buildBoard();
+    document.querySelector(".game_board").innerHTML = '';
+    document.querySelector(".info_box").innerHTML = '';
+    deckSize = 0;
+    initialize();
+    userInput.focus();
   });
 
 
-// 
-// color_field.addEventListener("keypress", function(e){
-//   if (13 == e.keyCode) {
-//    deckSize = color_field.value;
-//   }
-// });
+
+
+
+
 
 
 
 function buildBoard () {
-
   for (var i = 1; i <= deckSize/2; i++) {
     cards.push(i, i);
   }
@@ -80,5 +88,5 @@ function playGame () {
       } // end loop over all squares
 }   //end function: playGame
 
-// buildBoard();
-playGame();
+
+initialize();

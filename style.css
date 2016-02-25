@@ -3,19 +3,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /*height: 250px;*/
-  /*margin: 100px;*/
+
 }
 .square {
   height: 200px;
   width: 200px;
-  border: 1px solid #C0C0C0;
-  background-color: #C0C0C0;
+  /*border: 1px solid #ffc952;*/
+  background-color: #ffc952;
   margin: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
-  color: #C0C0C0;
+  color: #ffc952;
   font-size: 140px;
 }
 
@@ -23,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 250px;
   margin: 0px;
   flex-direction: column;
 }
@@ -31,16 +30,18 @@
   /*margin: 50px;*/
   margin: 20px auto 20px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 60px;
   font-family: inherit;
   text-align: center;
-  width: 694px;
-  height: 45px;
-  color: #C0C0C0;
+  width: 698px;
+  height: 80px;
+  color: #34314c;
+  background-color: #ff7473;
+  border: none;
 }
 
 #restart {
-  margin: 14px auto 18px;
+  margin: 0px auto 18px;
   border: none;
   height: 84px;
   width: 702px;
@@ -48,7 +49,8 @@
   font-size: inherit;
   font-family: inherit;
   padding: 0px;
-  color: white;
+  color: #34314c;
+  background-color: #ff7473;
 }
 
 
@@ -61,6 +63,10 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+background-image: -webkit-linear-gradient(to bottom, #34314c, #47b8e0);
+background-image: -o-linear-gradient(to bottom, #34314c, #47b8e0);
+background-image: linear-gradient(to bottom, #34314c, #47b8e0);
+height: 2000px;
 }
 
 textarea:focus, input:focus{
@@ -68,9 +74,10 @@ textarea:focus, input:focus{
 }
 
 p {
-  background-color: #C0C0C0;
+  background-color: #ff7473;
+  color: #34314c;
   padding: 12px 0px;
-  width: 700px;
+  width: 698px;
   text-align: center;
   margin: 15px auto 1px;
 }
@@ -81,4 +88,11 @@ p {
 
 .title {
   margin: 0px auto 0px;
+}
+
+/*html {
+  background-image: -webkit-linear-gradient(to bottom, #34314c, #47b8e0);
+  background-image: -o-linear-gradient(to bottom, #34314c, #47b8e0);
+  background-image: linear-gradient(to bottom, #34314c, #47b8e0);
+  }*/
 }

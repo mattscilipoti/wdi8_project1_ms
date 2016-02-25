@@ -51,7 +51,7 @@ function playGame () {
     var squares = document.querySelectorAll(".square");
       for (var i = 0; i < squares.length; i++) {
           squares[i].addEventListener('click', function(){
-                this.style.background = "white";
+                this.style.background = "#47b8e0";
                 guesses++;
                 if (pickedCards.length === 0) {
                   pickedCards.push({id: this.id, text: this.innerHTML});

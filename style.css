@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 220px;
   margin: 0px;
   flex-direction: column;
 }
@@ -41,7 +41,7 @@
 }
 
 #restart {
-  margin: 0px auto 18px;
+  margin: 3px auto 18px;
   border: none;
   height: 84px;
   width: 702px;
@@ -66,7 +66,7 @@ body {
 background-image: -webkit-linear-gradient(to bottom, #34314c, #47b8e0);
 background-image: -o-linear-gradient(to bottom, #34314c, #47b8e0);
 background-image: linear-gradient(to bottom, #34314c, #47b8e0);
-height: 1250px;
+height: 1300px;
 }
 
 textarea:focus, input:focus{
@@ -88,11 +88,4 @@ p {
 
 .title {
   margin: 0px auto 0px;
-}
-
-/*html {
-  background-image: -webkit-linear-gradient(to top, #34314c, #47b8e0);
-  background-image: -o-linear-gradient(to top, #34314c, #47b8e0);
-  background-image: linear-gradient(to top, #34314c, #47b8e0);
-  }*/
 }

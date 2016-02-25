@@ -74,13 +74,13 @@ function playGame () {
                       setTimeout(function() {
                         guess1.style.background = '#C0C0C0';
                         guess2.style.background = '#C0C0C0';
-                      }, 200);
+                      }, 400);
                       pickedCards = [];
                     }  // end condition: no match
                 }  // end condition: second card picked
           });  // end function: eventListener
       } // end loop over all squares
 }   //end function: playGame
- 
+
 restartButton();
 initialize();

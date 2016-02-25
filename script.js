@@ -81,6 +81,6 @@ function playGame () {
           });  // end function: eventListener
       } // end loop over all squares
 }   //end function: playGame
-
+ 
 restartButton();
 initialize();

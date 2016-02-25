@@ -16,6 +16,7 @@
   justify-content: center;
   color: #ffc952;
   font-size: 140px;
+  border-radius: 10px;
 }
 
 .info_box {
@@ -38,6 +39,7 @@
   color: #34314c;
   background-color: #ff7473;
   border: none;
+  border-radius: 10px
 }
 
 #restart {
@@ -51,6 +53,7 @@
   padding: 0px;
   color: #34314c;
   background-color: #ff7473;
+  border-radius: 10px;
 }
 
 
@@ -63,9 +66,12 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-background-image: -webkit-linear-gradient(to bottom, #34314c, #47b8e0);
+background-image: -webkit-linear-gradient(to bottom, #47b8e0, #34314c);
+background-image: -o-linear-gradient(to bottom, #47b8e0, #34314c);
+background-image: linear-gradient(to bottom, #47b8e0, #34314c);
+/*background-image: -webkit-linear-gradient(to bottom, #34314c, #47b8e0);
 background-image: -o-linear-gradient(to bottom, #34314c, #47b8e0);
-background-image: linear-gradient(to bottom, #34314c, #47b8e0);
+background-image: linear-gradient(to bottom, #34314c, #47b8e0);*/
 height: 1300px;
 }
 
@@ -76,10 +82,11 @@ textarea:focus, input:focus{
 p {
   background-color: #ff7473;
   color: #34314c;
-  padding: 12px 0px;
+  padding: 8px 0px;
   width: 698px;
   text-align: center;
   margin: 15px auto 1px;
+  border-radius: 10px;
 }
 
 .results {
@@ -88,4 +95,5 @@ p {
 
 .title {
   margin: 0px auto 0px;
+  font-size: 60px;
 }

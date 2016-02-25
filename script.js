@@ -51,7 +51,7 @@ function playGame () {
     var squares = document.querySelectorAll(".square");
       for (var i = 0; i < squares.length; i++) {
           squares[i].addEventListener('click', function(){
-                this.style.background = "#47b8e0";
+                this.style.background = "#ff7473";
                 guesses++;
                 if (pickedCards.length === 0) {
                   pickedCards.push({id: this.id, text: this.innerHTML});
@@ -72,8 +72,8 @@ function playGame () {
                       var guess1 = document.getElementById(pickedCards[0].id);
                       var guess2 = document.getElementById(pickedCards[1].id);
                       setTimeout(function() {
-                        guess1.style.background = '#C0C0C0';
-                        guess2.style.background = '#C0C0C0';
+                        guess1.style.background = '#ffc952';
+                        guess2.style.background = '#ffc952';
                       }, 400);
                       pickedCards = [];
                     }  // end condition: no match

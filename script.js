@@ -3,7 +3,6 @@ var deckSize;
 
 function initialize() {
     document.querySelector(".info_box").innerHTML = '<p>HOW MANY SQUARES?</p><input type="text" id="userInput" autocomplete="off" autofocus></input>';
-
     userInput.focus();
     document.querySelector("#userInput").addEventListener("keypress", function(e){
       if (13 == e.keyCode) {
@@ -32,16 +31,7 @@ function buildBoard () {
     document.getElementById('square_'+[i]).innerHTML += cards[i];
   }
 }
-function restartButton() {
-document.querySelector("#restart").addEventListener("click", function() {
-    document.querySelector(".game_board").innerHTML = '';
-    document.querySelector(".info_box").innerHTML = '';
-    document.querySelector(".results").innerHTML = '';
-    deckSize = 0;
-    cards = [];
-    initialize();
-  });
-}
+
 function playGame () {
     var pickedCards = [];
     var matchedCards = 0;
@@ -79,7 +69,15 @@ function playGame () {
           });  // end function: eventListener
       } // end loop over all squares
 }   //end function: playGame
-
-
+function restartButton() {
+document.querySelector("#restart").addEventListener("click", function() {
+    document.querySelector(".game_board").innerHTML = '';
+    document.querySelector(".info_box").innerHTML = '';
+    document.querySelector(".results").innerHTML = '';
+    deckSize = 0;
+    cards = [];
+    initialize();
+  });
+}
 
 initialize();

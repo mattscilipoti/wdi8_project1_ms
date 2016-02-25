@@ -1,6 +1,6 @@
 # Project #1
 
-### Memory Game
+## Memory Game
 
 ### User Stories
 

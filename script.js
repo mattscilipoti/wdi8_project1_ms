@@ -38,9 +38,11 @@ function playGame () {
     var guesses = 0;
     var squares = document.querySelectorAll(".square");
       for (var i = 0; i < squares.length; i++) {
+        // mms: watch the inconsistent indentation
           squares[i].addEventListener('click', function(){
                 this.style.background = "#ff7473";
                 guesses++;
+                // mms: these two conditions look like the same code.  How can we DRY this up?
                 if (pickedCards.length === 0) {
                   pickedCards.push({id: this.id, text: this.innerHTML});
                 }
@@ -48,6 +50,7 @@ function playGame () {
                   pickedCards.push({id: this.id, text: this.innerHTML});
 
                     if (pickedCards[0].text === pickedCards[1].text) {
+                        // mms: challenge:  This code is a long way from the left gutter. How can we avoid nesting this code this deeply?
                         console.log("match");
                         pickedCards = [];
                         matchedCards+=2;
@@ -57,9 +60,15 @@ function playGame () {
                     }
                     else {
                       console.log("no match");
+
                       var guess1 = document.getElementById(pickedCards[0].id);
                       var guess2 = document.getElementById(pickedCards[1].id);
                       setTimeout(function() {
+                        // mms: recommend using css for styling.  That usually means adding/removing classes via js.
+                        //    e.g. guess1.classList.remove('picked')
+                        // mms: also, we already had a reference to this element.  Can we use that now?
+                        //    e.g. pickedCards[0].el.classList.remove('picked')   (requires a change to the card initialization)
+                        //   What else does this gain us?  Do we really need to hard code `pickedCards[0]`?
                         guess1.style.background = '#ffc952';
                         guess2.style.background = '#ffc952';
                       }, 400);
